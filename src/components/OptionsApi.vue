@@ -27,7 +27,7 @@ export default {
 
 <template>    
       <main>
-        <h1>GitHub User Data</h1>
+        <h1>GitHub User Data método Options</h1>
       <input type="text" v-model="searchInput">
       <button @click="fetchGithubUser">Load User</button>
       <img :src="avatar_url">

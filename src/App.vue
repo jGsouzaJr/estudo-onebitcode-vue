@@ -1,15 +1,25 @@
-<script>
-import Github from './components/Github.vue'
-export default {
-components:{
-  Github
-}
-}
-
+<script setup>
+import {ref} from 'vue';
+import CompositonApi from './components/CompositonApi.vue';
+// import OptionsApi from './components/OptionsApi.vue'
+// import MetodoSetup from './components/MetodoSetup.vue';
+// export default {
+// components:{
+//   OptionsApi,
+//   CompositonApi,
+//   MetodoSetup
+// }
+// }
+const isOpen = ref(true)
 </script>
 
 <template>
-  <Github/>
+ <div>
+  <input type="checkbox" v-model="isOpen" > {{ isOpen }}
+   <CompositonApi v-if="isOpen"/>
+  <!-- <OptionsApi/> -->
+  <!-- <MetodoSetup/> -->
+ </div>
 </template>
 
 <style>
